@@ -18,6 +18,13 @@
 		6DE1035BF7DE317FE9E328C2 /* libPods-AdvancedBloggingApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B32E30124374EF66F22F144 /* libPods-AdvancedBloggingApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C5A2E9E15985BB9A5A338FCD /* libPods-AdvancedBloggingApp-AdvancedBloggingAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F36FD6641BD6D81442298FE /* libPods-AdvancedBloggingApp-AdvancedBloggingAppTests.a */; };
+		6B6579D07CC743DE98200D1E /* Kalam-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7921414650E94CC89A0EE410 /* Kalam-Bold.ttf */; };
+		3DF3A69FA7F64FEC93D10AB8 /* Kalam-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2154C3B5A13A401E8ED38ABB /* Kalam-Light.ttf */; };
+		2D74DF14962443A394FEA6E6 /* Kalam-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F91C64A8BF34F829A45E4EA /* Kalam-Regular.ttf */; };
+		2A45779264DA4F5E8F666C5A /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 979797040706450E8C998CBB /* PermanentMarker-Regular.ttf */; };
+		5395B76098FD42B89084750A /* RobotoMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C68BDC2A0CA84731967EC80D /* RobotoMono-BoldItalic.ttf */; };
+		70207EFC5EC443509F15EACC /* RobotoMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 059CB8E908CF4F7B91EA61A3 /* RobotoMono-Thin.ttf */; };
+		02B6668481074D06ACDD4EA1 /* RobotoMono-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F6C381EB1453485794E0128B /* RobotoMono-ThinItalic.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +66,13 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F3E913972B31574447799D3B /* Pods-AdvancedBloggingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedBloggingApp.debug.xcconfig"; path = "Target Support Files/Pods-AdvancedBloggingApp/Pods-AdvancedBloggingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7921414650E94CC89A0EE410 /* Kalam-Bold.ttf */ = {isa = PBXFileReference; name = "Kalam-Bold.ttf"; path = "../assets/fonts/Kalam-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2154C3B5A13A401E8ED38ABB /* Kalam-Light.ttf */ = {isa = PBXFileReference; name = "Kalam-Light.ttf"; path = "../assets/fonts/Kalam-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2F91C64A8BF34F829A45E4EA /* Kalam-Regular.ttf */ = {isa = PBXFileReference; name = "Kalam-Regular.ttf"; path = "../assets/fonts/Kalam-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		979797040706450E8C998CBB /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; name = "PermanentMarker-Regular.ttf"; path = "../assets/fonts/PermanentMarker-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C68BDC2A0CA84731967EC80D /* RobotoMono-BoldItalic.ttf */ = {isa = PBXFileReference; name = "RobotoMono-BoldItalic.ttf"; path = "../assets/fonts/RobotoMono-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		059CB8E908CF4F7B91EA61A3 /* RobotoMono-Thin.ttf */ = {isa = PBXFileReference; name = "RobotoMono-Thin.ttf"; path = "../assets/fonts/RobotoMono-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F6C381EB1453485794E0128B /* RobotoMono-ThinItalic.otf */ = {isa = PBXFileReference; name = "RobotoMono-ThinItalic.otf"; path = "../assets/fonts/RobotoMono-ThinItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +167,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				896751923113820FB4EA36BE /* Pods */,
+				AB46F86005034D87B7EA75FE /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -181,6 +196,21 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		AB46F86005034D87B7EA75FE /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				7921414650E94CC89A0EE410 /* Kalam-Bold.ttf */,
+				2154C3B5A13A401E8ED38ABB /* Kalam-Light.ttf */,
+				2F91C64A8BF34F829A45E4EA /* Kalam-Regular.ttf */,
+				979797040706450E8C998CBB /* PermanentMarker-Regular.ttf */,
+				C68BDC2A0CA84731967EC80D /* RobotoMono-BoldItalic.ttf */,
+				059CB8E908CF4F7B91EA61A3 /* RobotoMono-Thin.ttf */,
+				F6C381EB1453485794E0128B /* RobotoMono-ThinItalic.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -324,6 +354,13 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				6B6579D07CC743DE98200D1E /* Kalam-Bold.ttf in Resources */,
+				3DF3A69FA7F64FEC93D10AB8 /* Kalam-Light.ttf in Resources */,
+				2D74DF14962443A394FEA6E6 /* Kalam-Regular.ttf in Resources */,
+				2A45779264DA4F5E8F666C5A /* PermanentMarker-Regular.ttf in Resources */,
+				5395B76098FD42B89084750A /* RobotoMono-BoldItalic.ttf in Resources */,
+				70207EFC5EC443509F15EACC /* RobotoMono-Thin.ttf in Resources */,
+				02B6668481074D06ACDD4EA1 /* RobotoMono-ThinItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

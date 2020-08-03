@@ -51,19 +51,19 @@ const App = () => {
               </Text>
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
+              <Text style={styles.sectionTitle2}>See Your Changes</Text>
               <Text style={styles.sectionDescription}>
                 <ReloadInstructions />
               </Text>
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
+              <Text style={styles.sectionTitle3}>Debug</Text>
               <Text style={styles.sectionDescription}>
                 <DebugInstructions />
               </Text>
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
+              <Text style={styles.sectionTitle4}>Learn More</Text>
               <Text style={styles.sectionDescription}>
                 Read the docs to discover what to do next:
               </Text>
@@ -92,14 +92,29 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   sectionTitle: {
+    fontFamily: 'Kalam-Bold',
     fontSize: 24,
-    fontWeight: '600',
+    color: Colors.black,
+  },
+  sectionTitle2: {
+    fontFamily: 'Kalam-Light',
+    fontSize: 24,
+    color: Colors.black,
+  },
+  sectionTitle3: {
+    fontFamily: 'PermanentMarker-Regular',
+    fontSize: 24,
+    color: Colors.black,
+  },
+  sectionTitle4: {
+    fontFamily: 'RobotoMono-ThinItalic',
+    fontSize: 24,
     color: Colors.black,
   },
   sectionDescription: {
+    fontFamily: 'RobotoMono-BoldItalic',
     marginTop: 8,
     fontSize: 18,
-    fontWeight: '400',
     color: Colors.dark,
   },
   highlight: {
