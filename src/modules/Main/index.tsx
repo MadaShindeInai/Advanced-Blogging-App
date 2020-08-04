@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {StatusBar, Text} from 'react-native';
-import {styles} from './styles';
+import {styles} from '../../screens/MainScreen/styles';
 
 export const Main: FC = () => {
   return (
