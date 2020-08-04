@@ -1,12 +1,10 @@
-import React from 'react';
-import {StatusBar, Text} from 'react-native';
-import {styles} from './styles';
+import React, {FC} from 'react';
+import {Main} from '../Main';
 
-const App = () => {
+const App: FC = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <Text style={styles.sectionTitle}>Hello world</Text>
+      <Main />
     </>
   );
 };
