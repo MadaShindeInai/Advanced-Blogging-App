@@ -7,10 +7,15 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  sectionTitle: {
+  title: {
     ...THEME.fonts.bold,
     color: THEME.colors.TEXT,
     textAlign: 'center',
     marginTop: 30,
+  },
+  desc: {
+    ...THEME.fonts.light,
+    color: THEME.colors.TEXT,
+    textAlign: 'center',
   },
 });

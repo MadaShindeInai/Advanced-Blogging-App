@@ -54,7 +54,7 @@ export const THEME: ThemeTypes = {
   fonts: {
     title: {
       fontFamily: 'RobotoMono-ThinItalic',
-      fontSize: 44,
+      fontSize: 30,
       fontWeight: 'bold',
       fontStyle: 'italic',
       textAlign: 'center',
