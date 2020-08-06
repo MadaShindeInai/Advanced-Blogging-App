@@ -67,7 +67,7 @@ export const THEME: ThemeTypes = {
     },
     regular: {
       fontFamily: 'Kalam-Regular',
-      fontSize: 16,
+      fontSize: 25,
       fontWeight: 'normal',
       fontStyle: 'italic',
       textAlign: 'center',

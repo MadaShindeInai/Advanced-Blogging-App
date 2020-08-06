@@ -13,4 +13,9 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 30,
   },
+  btnFont: {
+    ...THEME.fonts.regular,
+    color: '#ffffff',
+    paddingRight: 10,
+  },
 });

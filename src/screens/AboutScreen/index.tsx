@@ -6,7 +6,7 @@ export const AboutScreen: FC<any> = ({route, navigation}) => {
   const {itemId, name, rate} = route.params;
   return (
     <>
-      <StatusBar barStyle="dark-content" backgroundColor="f4511e" />
+      <StatusBar barStyle="dark-content" backgroundColor="#f4511e" />
       <View style={styles.screen}>
         <Text style={styles.title}>AboutScreen</Text>
         <Text style={styles.desc}>Person Id: {JSON.stringify(itemId)}</Text>

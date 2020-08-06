@@ -23,6 +23,10 @@ export const MainScreen: FC<any> = ({navigation, route}) => {
           title="Create Screen ===>"
           onPress={() => navigation.navigate('CreateScreen')}
         />
+        <Button
+          title="Go to Post"
+          onPress={() => navigation.navigate('PostScreen')}
+        />
       </View>
     </SafeAreaView>
   );
