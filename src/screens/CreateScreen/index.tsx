@@ -2,7 +2,7 @@ import React, {FC, useState} from 'react';
 import {TextInput, View, Button, StatusBar, SafeAreaView} from 'react-native';
 import {styles} from './styles';
 
-export const CreateScreen: FC<any> = ({navigation, route}) => {
+export const CreateScreen: FC<any> = ({navigation}) => {
   const [postText, setPostText] = useState('');
   return (
     <SafeAreaView style={styles.wrapper}>
