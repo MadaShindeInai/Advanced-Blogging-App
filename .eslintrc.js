@@ -16,5 +16,6 @@ module.exports = {
     'global-require': 0,
     'import/prefer-default-export': 0,
     'react/jsx-props-no-spreading': 0,
+    '@typescript-eslint/no-use-before-define': 0,
   },
 };

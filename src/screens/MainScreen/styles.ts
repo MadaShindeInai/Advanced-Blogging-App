@@ -4,9 +4,10 @@ import {THEME} from '../../theme';
 export const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#000000',
+    backgroundColor: THEME.colors.WHITE,
+  },
+  viewWrapper: {
+    padding: 10,
   },
   sectionTitle: {
     ...THEME.fonts.bold,

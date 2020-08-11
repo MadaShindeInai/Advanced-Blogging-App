@@ -96,6 +96,24 @@ const App: FC = () => {
             ),
           }}
         />
+        <Stack.Screen
+          name="BookedScreen"
+          component={BookedScreen}
+          initialParams={{itemId: 1}}
+          // options={({route}: any) => ({
+          //   title: route.params.name,
+          //   headerTintColor: 'black',
+          //   headerTitleStyle: {
+          //     ...THEME.fonts.title,
+          //   },
+          // })}
+          options={{
+            headerTitle: (props: any) => <LogoTitle {...props} />,
+            headerRight: () => (
+              <Button onPress={() => {}} title="Info" color="black" />
+            ),
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
