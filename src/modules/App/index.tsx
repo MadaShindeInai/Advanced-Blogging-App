@@ -3,12 +3,13 @@ import React, {FC} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 // import {THEME} from 'src/theme';
-import {Button} from 'react-native';
+import {Button, Platform} from 'react-native';
 import {THEME} from 'src/theme';
 import {MainScreen} from '../../screens/MainScreen';
 import {AboutScreen} from '../../screens/AboutScreen';
 import {CreateScreen} from '../../screens/CreateScreen';
 import {PostScreen} from '../../screens/PostScreen';
+import {BookedScreen} from '../../screens/BookedScreen';
 import {LogoTitle} from '../../components/LogoTitle';
 
 const Stack = createStackNavigator();
@@ -17,11 +18,16 @@ const App: FC = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
+        initialRouteName="MainScreen"
         screenOptions={{
           headerStyle: {
-            backgroundColor: '#f4511e',
+            backgroundColor:
+              Platform.OS === 'android'
+                ? THEME.colors.MAIN
+                : THEME.colors.WHITE,
           },
-          headerTintColor: '#fff',
+          headerTintColor:
+            Platform.OS === 'android' ? THEME.colors.WHITE : THEME.colors.MAIN,
           headerTitleStyle: {
             fontWeight: 'bold',
           },
@@ -66,6 +72,9 @@ const App: FC = () => {
           component={PostScreen}
           initialParams={{itemId: 1}}
           options={{
+            headerStyle: {
+              backgroundColor: 'blue',
+            },
             headerTitle: (props: any) => <LogoTitle {...props} />,
           }}
         />

@@ -43,7 +43,7 @@ type ThemeTypes = {
 export const THEME: ThemeTypes = {
   colors: {
     DANGER: '#bb2124',
-    MAIN: '#7fffd4',
+    MAIN: '#f4511e',
     TEXT: '#3D5ABC',
     BORDER: '#87ceeb',
     SHADOW: '#000000',

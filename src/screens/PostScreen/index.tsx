@@ -1,5 +1,5 @@
 import React, {FC, useLayoutEffect} from 'react';
-import {Text, View, TouchableHighlight} from 'react-native';
+import {Text, View, TouchableHighlight, Button} from 'react-native';
 import {styles} from './styles';
 
 export const PostScreen: FC<any> = ({navigation}) => {
@@ -21,6 +21,14 @@ export const PostScreen: FC<any> = ({navigation}) => {
   return (
     <View style={styles.screen}>
       <Text style={styles.sectionTitle}>Count: {count}</Text>
+      <Button
+        title="Go to Home"
+        onPress={() => navigation.navigate('MainScreen')}
+      />
+      <Button
+        title="Go to BookedScreen"
+        onPress={() => navigation.navigate('BookedScreen')}
+      />
     </View>
   );
 };

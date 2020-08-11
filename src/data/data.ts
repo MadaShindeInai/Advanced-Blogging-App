@@ -1,0 +1,51 @@
+export const DATA = [
+  {
+    id: 1,
+    img: '../images/1.png',
+    text: 'img1',
+    date: new Date().toJSON(),
+    booked: true,
+  },
+  {
+    id: 2,
+    img: '../images/2.png',
+    text: 'img2',
+    date: new Date().toJSON(),
+    booked: true,
+  },
+  {
+    id: 3,
+    img: '../images/3.png',
+    text: 'img3',
+    date: new Date().toJSON(),
+    booked: false,
+  },
+  {
+    id: 4,
+    img: '../images/4.png',
+    text: 'img4',
+    date: new Date().toJSON(),
+    booked: false,
+  },
+  {
+    id: 5,
+    img: '../images/5.png',
+    text: 'img5',
+    date: new Date().toJSON(),
+    booked: false,
+  },
+  {
+    id: 6,
+    img: '../images/6.png',
+    text: 'img6',
+    date: new Date().toJSON(),
+    booked: true,
+  },
+  {
+    id: 7,
+    img: '../images/7.png',
+    text: 'img7',
+    date: new Date().toJSON(),
+    booked: true,
+  },
+];
