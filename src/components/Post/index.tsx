@@ -7,18 +7,22 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {THEME} from '../../theme';
+import {options as dateOptions} from '../../../constanst';
 
 type PostProps = {
   item: any;
+  openPost: (item: any) => any;
 };
 
-export const Post: FC<PostProps> = ({item}) => {
+export const Post: FC<PostProps> = ({item, openPost}) => {
   return (
-    <TouchableOpacity activeOpacity={0.7} onPress={() => {}}>
+    <TouchableOpacity activeOpacity={0.7} onPress={() => openPost(item)}>
       <View style={styles.wrapper}>
         <ImageBackground style={styles.image} source={item.uri}>
           <View style={styles.textWrap}>
-            <Text style={styles.title}>{item.date}</Text>
+            <Text style={styles.title}>
+              {new Date(item.date).toLocaleString('en-US', dateOptions)}
+            </Text>
           </View>
         </ImageBackground>
       </View>

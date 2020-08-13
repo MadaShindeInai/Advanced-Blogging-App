@@ -11,6 +11,7 @@ import {CreateScreen} from '../../screens/CreateScreen';
 import {PostScreen} from '../../screens/PostScreen';
 import {BookedScreen} from '../../screens/BookedScreen';
 import {LogoTitle} from '../../components/LogoTitle';
+import {options as dateOptions} from '../../../constanst';
 
 const Stack = createStackNavigator();
 
@@ -71,12 +72,18 @@ const App: FC = () => {
           name="PostScreen"
           component={PostScreen}
           initialParams={{itemId: 1}}
-          options={{
-            headerStyle: {
-              backgroundColor: 'blue',
-            },
-            headerTitle: (props: any) => <LogoTitle {...props} />,
-          }}
+          // options={{
+          //   headerStyle: {
+          //     backgroundColor: 'blue',
+          //   },
+          //   headerTitle: (props: any) => <LogoTitle {...props} />,
+          // }}
+          options={({route}: any) => ({
+            title: new Date(route.params.postDate).toLocaleString(
+              'en-US',
+              dateOptions,
+            ),
+          })}
         />
         <Stack.Screen
           name="CreateScreen"
