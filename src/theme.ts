@@ -74,7 +74,7 @@ export const THEME: ThemeTypes = {
     },
     bold: {
       fontFamily: 'Kalam-Bold',
-      fontSize: 44,
+      fontSize: 42,
       fontWeight: 'bold',
       fontStyle: 'italic',
       textAlign: 'center',

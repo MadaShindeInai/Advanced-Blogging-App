@@ -2,9 +2,10 @@ import 'react-native-gesture-handler';
 import React, {FC} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-// import {THEME} from 'src/theme';
 import {Button, Platform} from 'react-native';
+import {HeaderButtons, Item} from 'react-navigation-header-buttons';
 import {THEME} from 'src/theme';
+import {HeaderIcon} from '../../components/HeaderIcon';
 import {MainScreen} from '../../screens/MainScreen';
 import {AboutScreen} from '../../screens/AboutScreen';
 import {CreateScreen} from '../../screens/CreateScreen';
@@ -42,6 +43,14 @@ const App: FC = () => {
         <Stack.Screen
           name="MainScreen"
           component={MainScreen}
+          options={{
+            headerTitle: (props: any) => <LogoTitle {...props} />,
+            headerRight: () => (
+              <HeaderButtons HeaderButtonComponent={HeaderIcon}>
+                <Item title="Take photo" iconName="camera" onPress={() => {}} />
+              </HeaderButtons>
+            ),
+          }}
           // options={{
           //   title: 'Main Screen',
           //   headerStyle: {
