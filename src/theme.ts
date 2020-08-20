@@ -39,7 +39,7 @@ export const THEME: ThemeTypes = {
     MAIN: '#f4511e',
     TEXT: '#3D5ABC',
     BORDER: '#87ceeb',
-    SHADOW: '#000000',
+    SHADOW: 'rgba(0,0,0,0.7)',
     SUCCESS: '#22bb33',
     INFO: '#5bc0de',
     WHITE: '#FFFFFF',

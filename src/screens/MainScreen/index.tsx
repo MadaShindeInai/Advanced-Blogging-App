@@ -7,7 +7,11 @@ import {THEME} from '../../theme';
 
 export const MainScreen: FC<any> = ({navigation}) => {
   const openPost = (item: any) => {
-    navigation.navigate('PostScreen', {postId: item.id, postDate: item.date});
+    navigation.navigate('PostScreen', {
+      postId: item.id,
+      postDate: item.date,
+      postBooked: item.booked,
+    });
   };
   return (
     <SafeAreaView style={styles.wrapper}>
