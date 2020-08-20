@@ -13,28 +13,21 @@ type ThemeTypes = {
     title: {
       fontFamily: string;
       fontSize: number;
-      fontWeight: 'bold';
-      fontStyle: 'italic' | 'normal' | undefined;
       textAlign: 'center';
     };
     light: {
       fontFamily: string;
       fontSize: number;
-      fontStyle: 'italic' | 'normal' | undefined;
       textAlign: 'center';
     };
     regular: {
       fontFamily: string;
       fontSize: number;
-      fontWeight: 'normal';
-      fontStyle: 'italic' | 'normal' | undefined;
       textAlign: 'center';
     };
     bold: {
       fontFamily: string;
       fontSize: number;
-      fontWeight: 'bold';
-      fontStyle: 'italic' | 'normal' | undefined;
       textAlign: 'center';
     };
   };
@@ -55,28 +48,21 @@ export const THEME: ThemeTypes = {
     title: {
       fontFamily: 'RobotoMono-ThinItalic',
       fontSize: 30,
-      fontWeight: 'bold',
-      fontStyle: 'italic',
       textAlign: 'center',
     },
     light: {
       fontFamily: 'Kalam-Light',
       fontSize: 32,
-      fontStyle: 'italic',
       textAlign: 'center',
     },
     regular: {
       fontFamily: 'Kalam-Regular',
       fontSize: 25,
-      fontWeight: 'normal',
-      fontStyle: 'italic',
       textAlign: 'center',
     },
     bold: {
       fontFamily: 'Kalam-Bold',
       fontSize: 42,
-      fontWeight: 'bold',
-      fontStyle: 'italic',
       textAlign: 'center',
     },
   },
