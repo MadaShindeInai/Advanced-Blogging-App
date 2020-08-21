@@ -1,11 +1,8 @@
 import React, {FC} from 'react';
-import {Text, View} from 'react-native';
-import {styles} from './styles';
+import {PostList} from 'src/components/PostsList';
+import {DATA} from '../../data';
 
-export const BookedScreen: FC = () => {
-  return (
-    <View style={styles.screen}>
-      <Text style={styles.sectionTitle}>BookedScreen</Text>
-    </View>
-  );
+export const BookedScreen: FC<any> = ({navigation}) => {
+  const bookedData = DATA.filter((item) => item.booked);
+  return <PostList data={bookedData} navigation={navigation} />;
 };

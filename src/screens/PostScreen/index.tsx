@@ -13,20 +13,7 @@ import {DATA} from '../../data';
 export const PostScreen: FC<any> = ({route}) => {
   const {postId} = route.params;
   const post = DATA.find((item) => item.id === postId);
-  // const [count, setCount] = React.useState(0);
 
-  // useLayoutEffect(() => {
-  //   navigation.setOptions({
-  //     headerRight: () => (
-  //       <TouchableHighlight
-  //         activeOpacity={0.5}
-  //         underlayColor="#f4511e"
-  //         onPress={() => setCount((c) => c + 1)}>
-  //         <Text style={styles.btnFont}>UpdateCount</Text>
-  //       </TouchableHighlight>
-  //     ),
-  //   });
-  // }, [navigation]);
   const handleRemove = () => {
     Alert.alert(
       'Do you really want to delete this post?',
