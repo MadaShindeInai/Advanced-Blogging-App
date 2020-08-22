@@ -214,10 +214,44 @@ function PostNavigator() {
 const App: FC = () => {
   return (
     <NavigationContainer>
-      <MainNavigator.Navigator>
-        <MainNavigator.Screen name="Home" component={PostNavigator} />
-        <MainNavigator.Screen name="About" component={AboutScreenNavigator} />
-        <MainNavigator.Screen name="Create" component={CreateScreenNavigator} />
+      <MainNavigator.Navigator
+        drawerContentOptions={{
+          activeTintColor: THEME.colors.MAIN,
+          itemStyle: {marginVertical: 15},
+          labelStyle: {
+            ...THEME.fonts.regular,
+          },
+        }}>
+        <MainNavigator.Screen
+          name="Home"
+          component={PostNavigator}
+          options={{
+            title: 'Home',
+            drawerIcon: ({color}) => (
+              <FontAwesome name="home" color={color} size={24} />
+            ),
+          }}
+        />
+        <MainNavigator.Screen
+          name="Create"
+          component={CreateScreenNavigator}
+          options={{
+            title: 'New Post',
+            drawerIcon: ({color}) => (
+              <FontAwesome name="plus" color={color} size={24} />
+            ),
+          }}
+        />
+        <MainNavigator.Screen
+          name="About"
+          component={AboutScreenNavigator}
+          options={{
+            title: 'About Us',
+            drawerIcon: ({color}) => (
+              <FontAwesome name="info-circle" color={color} size={24} />
+            ),
+          }}
+        />
       </MainNavigator.Navigator>
     </NavigationContainer>
   );
