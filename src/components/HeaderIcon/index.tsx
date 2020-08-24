@@ -4,7 +4,13 @@ import {Platform} from 'react-native';
 import {THEME} from 'src/theme';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export const HeaderIcon = (props: any) => {
+type HIProps = {
+  title: string;
+  iconName: string;
+  onPress: () => void;
+};
+
+export const HeaderIcon = (props: HIProps) => {
   return (
     <HeaderButton
       {...props}

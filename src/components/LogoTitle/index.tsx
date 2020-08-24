@@ -4,11 +4,9 @@ import {styles} from './styles';
 
 export const LogoTitle = () => {
   return (
-    <>
-      <Image
-        style={styles.logo}
-        source={require('../../images/gatsby-icon.png')}
-      />
-    </>
+    <Image
+      style={styles.logo}
+      source={require('../../images/gatsby-icon.png')}
+    />
   );
 };
