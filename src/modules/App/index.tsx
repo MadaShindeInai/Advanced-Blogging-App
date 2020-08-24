@@ -1,5 +1,7 @@
 import 'react-native-gesture-handler';
 import React, {FC} from 'react';
+import {useDispatch, useSelector, Provider} from 'react-redux';
+import {toggleBooked} from 'src/actions/postActions';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -9,6 +11,8 @@ import {HeaderButtons, Item} from 'react-navigation-header-buttons';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {THEME} from 'src/theme';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import store from 'src/store';
+import {State} from 'src/types';
 import {HeaderIcon} from '../../components/HeaderIcon';
 import {MainScreen} from '../../screens/MainScreen';
 import {AboutScreen} from '../../screens/AboutScreen';
@@ -16,7 +20,7 @@ import {CreateScreen} from '../../screens/CreateScreen';
 import {PostScreen} from '../../screens/PostScreen';
 import {BookedScreen} from '../../screens/BookedScreen';
 import {LogoTitle} from '../../components/LogoTitle';
-import {options as dateOptions} from '../../../constanst';
+import {options as dateOptions} from '../../../constants';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -41,19 +45,6 @@ const screenOpts: any = {
   },
 };
 
-const postScreenOpts = ({route}: any) => ({
-  title: new Date(route.params.postDate).toLocaleString('en-US', dateOptions),
-  headerRight: () => (
-    <HeaderButtons HeaderButtonComponent={HeaderIcon}>
-      <Item
-        title="Take photo"
-        iconName={route.params.postBooked ? 'star' : 'star-o'}
-        onPress={() => {}}
-      />
-    </HeaderButtons>
-  ),
-});
-
 const aboutCreateOpts = ({navigation}: any) => ({
   headerTitle: (props: any) => <LogoTitle {...props} />,
   headerLeft: () => (
@@ -68,6 +59,8 @@ const aboutCreateOpts = ({navigation}: any) => ({
 });
 
 function HomeScreenNavigator() {
+  const dispatch = useDispatch();
+  const bookedList = useSelector((state: State) => state.post.bookedPosts);
   return (
     <Stack.Navigator screenOptions={screenOpts}>
       <Stack.Screen
@@ -98,7 +91,26 @@ function HomeScreenNavigator() {
       <Stack.Screen
         name="PostScreen"
         component={PostScreen}
-        options={postScreenOpts}
+        options={({route}: any) => {
+          const isBooked = bookedList.some(
+            (item) => item.id === route.params.postId,
+          );
+          return {
+            title: new Date(route.params.postDate).toLocaleString(
+              'en-US',
+              dateOptions,
+            ),
+            headerRight: () => (
+              <HeaderButtons HeaderButtonComponent={HeaderIcon}>
+                <Item
+                  title="Take photo"
+                  iconName={isBooked ? 'star' : 'star-o'}
+                  onPress={() => dispatch(toggleBooked(route.params.postId))}
+                />
+              </HeaderButtons>
+            ),
+          };
+        }}
       />
       <Stack.Screen name="CreateScreen" component={CreateScreenNavigator} />
     </Stack.Navigator>
@@ -128,6 +140,8 @@ function CreateScreenNavigator() {
 }
 
 function TabScreenNavigator() {
+  const dispatch = useDispatch();
+  const bookedList = useSelector((state: State) => state.post.bookedPosts);
   return (
     <Stack.Navigator screenOptions={screenOpts}>
       <Stack.Screen
@@ -149,7 +163,26 @@ function TabScreenNavigator() {
       <Stack.Screen
         name="PostScreen"
         component={PostScreen}
-        options={postScreenOpts}
+        options={({route}: any) => {
+          const isBooked = bookedList.some(
+            (item) => item.id === route.params.postId,
+          );
+          return {
+            title: new Date(route.params.postDate).toLocaleString(
+              'en-US',
+              dateOptions,
+            ),
+            headerRight: () => (
+              <HeaderButtons HeaderButtonComponent={HeaderIcon}>
+                <Item
+                  title="Take photo"
+                  iconName={isBooked ? 'star' : 'star-o'}
+                  onPress={() => dispatch(toggleBooked(route.params.postId))}
+                />
+              </HeaderButtons>
+            ),
+          };
+        }}
       />
     </Stack.Navigator>
   );
@@ -257,4 +290,12 @@ const App: FC = () => {
   );
 };
 
-export default App;
+const ReduxApp = () => {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
+};
+
+export default ReduxApp;

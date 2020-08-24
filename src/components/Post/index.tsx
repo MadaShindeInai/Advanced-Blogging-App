@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {THEME} from '../../theme';
-import {options as dateOptions} from '../../../constanst';
+import {options as dateOptions} from '../../../constants';
 
 type PostProps = {
   item: any;

@@ -8,3 +8,5 @@ export const options = {
   minute: 'numeric',
   second: 'numeric',
 };
+export const LOAD_POSTS = 'LOAD_POSTS';
+export const TOGGLE_BOOKED = 'MAKE_BOOKED';
