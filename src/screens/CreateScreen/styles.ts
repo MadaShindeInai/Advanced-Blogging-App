@@ -3,21 +3,26 @@ import {THEME} from '../../theme';
 
 export const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: 'yellow',
+    // backgroundColor: 'yellow',
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    padding: 10,
   },
   screen: {},
   sectionTitle: {
     ...THEME.fonts.bold,
     color: THEME.colors.TEXT,
     textAlign: 'center',
-    marginTop: 30,
+    marginVertical: 10,
   },
-  placeholder: {
-    height: 200,
+  textarea: {
     padding: 10,
-    backgroundColor: 'white',
+    marginBottom: 10,
+  },
+  img: {
+    width: '100%',
+    height: 200,
+    marginBottom: 30,
   },
 });

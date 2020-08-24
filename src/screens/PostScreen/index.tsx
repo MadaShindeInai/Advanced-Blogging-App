@@ -7,12 +7,17 @@ import {
   SafeAreaView,
   Alert,
 } from 'react-native';
+import {useSelector, useDispatch} from 'react-redux';
+import {State} from 'src/types';
+import {removePost} from 'src/actions/postActions';
 import {styles} from './styles';
-import {DATA} from '../../data';
 
-export const PostScreen: FC<any> = ({route}) => {
+export const PostScreen: FC<any> = ({route, navigation}) => {
   const {postId} = route.params;
-  const post = DATA.find((item) => item.id === postId);
+  const dispatch = useDispatch();
+  const post = useSelector((state: State) =>
+    state.post.allPosts.find((item) => item.id === postId),
+  );
 
   const handleRemove = () => {
     Alert.alert(
@@ -27,7 +32,10 @@ export const PostScreen: FC<any> = ({route}) => {
         {
           text: 'Delete',
           style: 'destructive',
-          onPress: () => {},
+          onPress: () => {
+            navigation.goBack();
+            dispatch(removePost(postId));
+          },
         },
       ],
       {cancelable: false},
